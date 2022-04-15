@@ -1,0 +1,13 @@
+{{!-- this is a search form --}}
+<form action="/moviesearch" method="GET">
+	<label for="search">Search for a title</label>
+	<input type="text" id="search" name="q">
+	<button type="submit">Search 🕵️‍♂️ 🕵️‍♀️</button>
+</form>
+
+{{!-- we iterate over the movies array --}}
+{{#each  movieList}}
+{{!-- this is the syntax to use a partial --}}
+{{!-- '>' 'name of the partial' 'data you want to pass to the partial'  --}}
+	{{> movieCard this}}
+{{/each}}
